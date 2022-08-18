@@ -29,6 +29,8 @@ public class ReadWriteQueue {
 			String text = new String(Files.readAllBytes(resource.toPath()));
 			List<String> list = Arrays.asList(text.replace("[", "").replace("]", ""));
 			writer.put(list);
+			writer.put("Test1");
+			writer.put("Test2");
 		} catch (IOException e1) {
 			System.out.println(e1.getMessage());
 		}
